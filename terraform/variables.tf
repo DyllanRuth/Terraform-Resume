@@ -19,3 +19,9 @@ variable "env" {
     error_message = "Environment must be dev, test, or prod."
   }
 }
+
+variable "project" {
+  type        = string
+  default     = "project-ecs-fargate"
+  description = "Project name."
+}

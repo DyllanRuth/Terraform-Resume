@@ -1,5 +1,11 @@
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-unique-bucket-name-${var.env}"
+/* Modules go here.
+module "name" {
+  
+}
+*/
+
+resource "aws_s3_bucket" "storage_bucket" {
+  bucket = "storage-bucket-${var.env}"
 
   tags = {
     Name        = "My bucket"
@@ -7,4 +13,3 @@ resource "aws_s3_bucket" "my_bucket" {
     Region      = var.region
   }
 }
-
